@@ -7,19 +7,17 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.LoaderManager;
 import android.support.v4.content.CursorLoader;
 import android.support.v4.content.Loader;
-import android.support.v4.widget.CursorAdapter;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+import android.provider.MediaStore;
 
 import com.feicui.demo.videonews.R;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import io.vov.vitamio.provider.MediaStore.Video.Media;
 
 /**
  * Created by Administrator on 2016/12/21.
@@ -74,13 +72,13 @@ public class LocalFragment extends Fragment implements LoaderManager.LoaderCallb
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         String[] projection = {
-                Media._ID,//视频ID
-                Media.DATA,//视频文件路径
-                Media.DISPLAY_NAME,//视频名称
+                MediaStore.Video.Media._ID,//视频ID
+                MediaStore.Video.Media.DATA,//视频文件的路径
+                MediaStore.Video.Media.DISPLAY_NAME//视频名称
         };
 
         return new CursorLoader(getContext(),
-                Media.CONTENT_URI,
+                MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
                 projection, null, null, null);
     }
 
