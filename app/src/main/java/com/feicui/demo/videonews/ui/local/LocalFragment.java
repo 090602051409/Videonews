@@ -77,16 +77,18 @@ public class LocalFragment extends Fragment implements LoaderManager.LoaderCallb
                 MediaStore.Video.Media.DISPLAY_NAME//视频名称
         };
 
-        return new CursorLoader(getContext(),
-                MediaStore.Video.Media.EXTERNAL_CONTENT_URI,
-                projection, null, null, null);
+        return new CursorLoader(
+                getContext(),
+                MediaStore.Video.Media.EXTERNAL_CONTENT_URI,//视频 uri
+                projection,
+                null, null, null
+        );
     }
-
-    //当数据加载完成时会触发：数据已加载完成，放在下面第二个参数data中
-    @Override
-    public void onLoadFinished(Loader<Cursor> loader, Cursor data) {
-        adapter.swapCursor(data);
-        //测试
+        //当数据加载完成时会触发：数据已加载完成，放在下面第二个参数data中
+        @Override
+        public void onLoadFinished (Loader < Cursor > loader, Cursor data){
+            adapter.swapCursor(data);
+            //测试
 //        if (data.moveToFirst()) {
 //            do {
 //                int index = data.getColumnIndex(Media.DIRECTORY_NAME);
@@ -94,12 +96,13 @@ public class LocalFragment extends Fragment implements LoaderManager.LoaderCallb
 //                Log.d("aaa", "onLoadFinished" + displayname);
 //            } while (data.moveToNext());
 //        }
+        }
+
+        //当数据加载重置
+        @Override
+        public void onLoaderReset (Loader < Cursor > loader) {
+            adapter.swapCursor(null);
+        }
+        //###############################loaderCallBack  end#####################################
     }
 
-    //当数据加载重置
-    @Override
-    public void onLoaderReset(Loader<Cursor> loader) {
-    adapter.swapCursor(null);
-    }
-    //###############################loaderCallBack  end#####################################
-}

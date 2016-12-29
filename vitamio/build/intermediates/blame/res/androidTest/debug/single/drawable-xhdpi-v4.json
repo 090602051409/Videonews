@@ -24,12 +24,12 @@
         "source": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\mediacontroller_play.png"
     },
     {
-        "merged": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png",
-        "source": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png"
-    },
-    {
         "merged": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png",
+        "source": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\bundles\\debug\\res\\drawable-xhdpi-v4\\scrubber_control_disabled_holo.png"
     },
     {
         "merged": "C:\\Users\\Administrator\\Downloads\\Videonews\\vitamio\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xhdpi-v4\\scrubber_primary_holo.9.png",
